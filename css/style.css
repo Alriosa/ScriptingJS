@@ -1,0 +1,24 @@
+body>section {
+    height: 1080px;
+    width: 1920px;
+    ;
+}
+
+#section1 {
+    background-color: aquamarine;
+}
+
+#section2 {
+    background-color: brown;
+}
+
+#section3 {}
+
+.scrollify {
+    height: 100vh;
+    width: 100%;
+    background-color: orange;
+    text-align: center;
+    padding: 25% 0;
+    border: 1px solid black;
+}
