@@ -1,6 +1,6 @@
+console.log('Scrollify is connected');
 $.scrollify({
     section: ".scrollify",
-    sectionName: "section-name",
     interstitialSection: "",
     easing: "easeOutExpo",
     scrollSpeed: 1500,
