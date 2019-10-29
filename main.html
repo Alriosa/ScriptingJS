@@ -13,17 +13,45 @@
 <body>
     <!--First Section-->
     <section class="scrollify" id="section1">
-        <p>Mr Reagan</p>
-        <input type="text" name="textBoxSecOneName" id="textBoxSecOne">
-        <p id="textSecOne"></p>
-        <input type="text" id="textBox2SecOne">
 
-        <button id="buttonSecOne" onclick="windowPopUp()">Alert Windows</button>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-3"></div>
+                <div class="col-md-3"></div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+
+        <!--!END First Section-->
     </section>
+
 
     <!--Second Section-->
     <section class="scrollify" id="section2">
-        <p>Mr Reagan is cool</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <p>Test title</p>
+                    <p id="tester">Test Text</p>
+                    <input type="text" name="textBoxSecOneName" id="textBoxSecOne">
+                    <p id="textSecOne"></p>
+                    <input type="text" id="textBox2SecOne">
+
+                    <button id="buttonSecOne" onclick="windowPopUp()">Alert Windows</button>
+
+                    <h2>Time Calculator</h2>
+                    <input type="text" id="textBoxDateOne">
+                    <input type="text" id="textBoxDateOne">
+                    <input type="text" id="textBoxDateOne">
+                    <button id="buttonTwoSecOne" onclick="getTime()">Get Date</button>
+                </div>
+                <div class="col-md-3"></div>
+                <div class="col-md-3"></div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+        <!--END Second Section-->
     </section>
 
     <script src="js/jquery-3.4.1.min.js"></script>
