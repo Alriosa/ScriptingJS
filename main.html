@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="img/alrimark.png" />
+    <title>Alriosa Toolkit</title>
 </head>
 
 <body>
@@ -16,7 +17,15 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                    <p>Test title</p>
+                    <p id="tester">Test Text</p>
+                    <input type="text" name="textBoxSecOneName" id="textBoxSecOne">
+                    <p id="textSecOne"></p>
+                    <input type="text" id="textBox2SecOne">
+
+                    <button id="buttonSecOne" onclick="windowPopUp()">Alert Windows</button>
+                </div>
                 <div class="col-md-3"></div>
                 <div class="col-md-3"></div>
                 <div class="col-md-3"></div>
@@ -32,21 +41,29 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <p>Test title</p>
-                    <p id="tester">Test Text</p>
-                    <input type="text" name="textBoxSecOneName" id="textBoxSecOne">
-                    <p id="textSecOne"></p>
-                    <input type="text" id="textBox2SecOne">
-
-                    <button id="buttonSecOne" onclick="windowPopUp()">Alert Windows</button>
-
                     <h2>Time Calculator</h2>
+                    <p>My Time</p>
+                    <input type="text" id="timeBoxMdt" value="MDT Time">
+
+                    <p>UTC Time</p>
+                    <input type="text" id="timeBoxUtc" value="UTC Time">
+
+
+
+                    <p>CST Time</p>
                     <input type="text" id="textBoxDateOne">
-                    <input type="text" id="textBoxDateOne">
+
+                    <p>MST Time</p>
                     <input type="text" id="textBoxDateOne">
                     <button id="buttonTwoSecOne" onclick="getTime()">Get Date</button>
                 </div>
-                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                    <p>EST Time</p>
+                    <input type="text" id="textBoxDateOne">
+
+                    <p>PST Time</p>
+                    <input type="text" id="textBoxDateOne">
+                </div>
                 <div class="col-md-3"></div>
                 <div class="col-md-3"></div>
             </div>
