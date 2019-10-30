@@ -25,8 +25,10 @@ function addZero(i) {
     return i;
 }
 
-function setEST() {
-
+function setEST(hourEST) {
+    if (hourEST <= 1) {
+        hourEST
+    }
 }
 
 function setPST() {
