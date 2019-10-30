@@ -29,7 +29,7 @@ function getTime() {
     var minuteMST;
 
 
-    document.getElementById("textBoxDateOne").value = hour + ":" + minute;
-    document.getElementById("textBoxDateTwo").value = hourUTC + ":" + minute;
+    document.getElementById("timeBoxMdt").value = hour + ":" + minute;
+    document.getElementById("timeBoxUtc").value = hourUTC + ":" + minute;
     console.log("Funciona");
 }
