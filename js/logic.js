@@ -10,13 +10,13 @@ var hourUTC = date.getUTCHours();
 //var minuteUTC = data.getUTCMinutes();
 
 var hourEST = date.getUTCHours();
-var minuteEST;
+var minuteEST = addZero(date.getMinutes());;
 
 var hourPST = date.getUTCHours();;
-var minutePST;
+var minutePST = addZero(date.getMinutes());;
 
 var hourCST = date.getUTCHours();;
-var minuteCST;
+var minuteCST = addZero(date.getMinutes());;
 
 function addZero(i) {
     if (i < 10) {
@@ -26,9 +26,11 @@ function addZero(i) {
 }
 
 function setEST(hourEST) {
+    hourEST = hourEST - 2;
     if (hourEST <= 1) {
-        hourEST
+        hourEST = hourEST + 24;
     }
+
 }
 
 function setPST() {
@@ -43,11 +45,12 @@ function getTime() {
 
     document.getElementById("timeBoxMdt").value = hour + ":" + minute;
     document.getElementById("timeBoxUtc").value = hourUTC + ":" + minute;
-    document.getElementById("timeBoxEst").value = hourUTC + ":" + minute;
-    document.getElementById("timeBoxPst").value = hourUTC + ":" + minute;
-    document.getElementById("timeBoxCst").value = hourUTC + ":" + minute;
-    document.getElementById("timeBoxMdt").value = hour + ":" + minute;
+    document.getElementById("timeBoxEst").value = hourEST + ":" + minute;
+    document.getElementById("timeBoxPst").value = hourPST + ":" + minute;
+    document.getElementById("timeBoxCst").value = hourCST + ":" + minute;
+    //document.getElementById("timeBoxMdt").value = hour + ":" + minute; Deprecated
     console.log("Funciona");
+
 }
 
 function windowPopUp() {
