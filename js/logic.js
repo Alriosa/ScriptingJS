@@ -3,20 +3,15 @@ document.getElementById("textBoxSecOne").value = "I insert this via JS";
 document.getElementById("textSecOne").innerHTML = 5 + 6;
 
 var date = new Date();
+
 var hour = date.getHours();
 var minute = addZero(date.getMinutes());
-
 var hourUTC = date.getUTCHours();
-//var minuteUTC = data.getUTCMinutes();
-
-var hourEST = date.getUTCHours();
-var minuteEST = addZero(date.getMinutes());;
-
+var hourEST = date.setHours(date.setUTCHours() - 2);
+console.log(hourEST);
 var hourPST = date.getUTCHours();;
-var minutePST = addZero(date.getMinutes());;
-
 var hourCST = date.getUTCHours();;
-var minuteCST = addZero(date.getMinutes());;
+
 
 function addZero(i) {
     if (i < 10) {
@@ -25,21 +20,6 @@ function addZero(i) {
     return i;
 }
 
-function setEST(hourEST) {
-    hourEST = hourEST - 2;
-    if (hourEST <= 1) {
-        hourEST = hourEST + 24;
-    }
-
-}
-
-function setPST() {
-
-}
-
-function setCST() {
-
-}
 
 function getTime() {
 
