@@ -1,16 +1,17 @@
 console.log('Logic is connected');
-document.getElementById("textBoxSecOne").value = "I insert this via JS";
+document.getElementById("textBoxSecOne").value = "I inserted this via JS";
 document.getElementById("textSecOne").innerHTML = 5 + 6;
+
+
 
 var date = new Date();
 
 var hour = date.getHours();
 var minute = addZero(date.getMinutes());
-var hourUTC = date.getUTCHours();
-var hourEST = date.setHours(date.setUTCHours() - 2);
-console.log(hourEST);
-var hourPST = date.getUTCHours();;
-var hourCST = date.getUTCHours();;
+var hourUTC = date.getHours() + 6;
+var hourEST = date.getHours() + 2;
+var hourPST = date.getHours() - 1;
+var hourCST = date.getHours() + 1;
 
 
 function addZero(i) {
@@ -20,6 +21,7 @@ function addZero(i) {
     return i;
 }
 
+function validate24h(h) {}
 
 function getTime() {
 
@@ -28,7 +30,6 @@ function getTime() {
     document.getElementById("timeBoxEst").value = hourEST + ":" + minute;
     document.getElementById("timeBoxPst").value = hourPST + ":" + minute;
     document.getElementById("timeBoxCst").value = hourCST + ":" + minute;
-    //document.getElementById("timeBoxMdt").value = hour + ":" + minute; Deprecated
     console.log("Funciona");
 
 }
