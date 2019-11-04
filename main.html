@@ -11,7 +11,7 @@
     <title>Alriosa Toolkit</title>
 </head>
 
-<body>
+<body onload="autoTimeRefresh(60000)">
     <!--First Section-->
     <section class="scrollify" id="section1">
 
@@ -50,27 +50,61 @@
 
                 <div class="col-md-3">
                     <p>MDT Time(My Time)</p>
-                    <input type="text" id="timeBoxMdt" value="MDT Time">
+                    <input type="text" id="timeBoxMdt" value="MDT Time" disabled>
 
                     <p>UTC Time</p>
-                    <input type="text" id="timeBoxUtc" value="UTC Time">
+                    <input type="text" id="timeBoxUtc" value="UTC Time" disabled>
                     <button id="buttonTwoSecOne" onclick="getTime()">Get Date</button>
                 </div>
 
                 <div class="col-md-3">
                     <p>EST Time</p>
-                    <input type="text" id="timeBoxEst" value="EST Time">
+                    <input type="text" id="timeBoxEst" value="EST Time" disabled>
 
                     <p>PST Time</p>
-                    <input type="text" id="timeBoxPst" value="PST Time">
+                    <input type="text" id="timeBoxPst" value="PST Time" disabled>
                 </div>
                 <div class="col-md-3">
 
                     <p>CST Time</p>
-                    <input type="text" id="timeBoxCst" value="CST Time">
+                    <input type="text" id="timeBoxCst" value="CST Time" disabled>
 
                 </div>
                 <div class="col-md-3"></div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                    <h2>Time Conversor</h2>
+                </div>
+                <div class="col-md-3"></div>
+                <div class="col-md-3"></div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <p>Select the time zone of the Client</p>
+                    <select>
+                        <option value="selectNULL">---</option>
+                        <option value="selectUTC" onclick="customerTimeToMineUTC()">UTC</option>
+                        <option value="selectEST" onclick="customerTimeToMineEST()">EST</option>
+                        <option value="selectPST" onclick="customerTimeToMinePST()">PST</option>
+                        <option value="selectCST" onclick="customerTimeToMineCST()">CST</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <p>Time of the Client</p>
+                    <input type="text">
+                </div>
+                <div class="col-md-3">
+                    <p>Your Time of the Client</p>
+                    <input type="text" disabled>
+                </div>
+                <div class="col-md-3">
+
+                </div>
+
             </div>
         </div>
         <!--END Second Section-->
