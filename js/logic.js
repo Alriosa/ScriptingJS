@@ -4,7 +4,9 @@ document.getElementById("textSecOne").innerHTML = 5 + 6;
 
 
 //------------------------------//Inicio de logica de tiempo.//------------------------------//
-
+$(document).ready(function() {
+    cleaning();
+});
 var date = new Date();
 var hour = date.getHours();
 var minute = addZero(date.getMinutes());
@@ -13,6 +15,12 @@ var hourEST = date.getHours() + 2;
 var hourPST = date.getHours() - 1;
 var hourCST = date.getHours() + 1;
 
+function cleaning() {
+    document.getElementById("timeOfClient").value = " ";
+    document.getElementById("timeOfClientMDT").value = " ";
+    document.getElementById("timeOfClient").classList.remove('alert');
+    console.log("Cleaning function is ready");
+}
 
 //function validate24h(h){}(Aun no se si hacer esta funcion para validar)
 
@@ -37,7 +45,11 @@ function autoTimeRefresh(t) {
 }
 
 function getTime() {
-
+    document.getElementById("timeBoxMdt").value = null;
+    document.getElementById("timeBoxUtc").value = null;
+    document.getElementById("timeBoxEst").value = null;
+    document.getElementById("timeBoxPst").value = null;
+    document.getElementById("timeBoxCst").value = null;
     document.getElementById("timeBoxMdt").value = hour + ":" + minute;
     document.getElementById("timeBoxUtc").value = hourUTC + ":" + minute;
     document.getElementById("timeBoxEst").value = hourEST + ":" + minute;
@@ -46,17 +58,63 @@ function getTime() {
 
 }
 
-function timeTransform() {
-    document.getElementById("yourTimebox").value = hour + ":" + minute;
+var thisBoxDateClient = document.getElementById("timeOfClient").value;
+
+function validateEmptyValue() {
+    if (thisBoxDateClient.value.lenght == 0) {
+        console.log("Value not found");
+        document.getElementById("timeOfClient").classList.add('alert');
+        document.getElementById("timeOfClient").value = "Insert a value";
+    } else {
+        console.log("Validacion effective");
+    }
 }
 
-function customerTimeToMineUTC() {}
+function selectElement(id, valueToSelect) {
+    let element = document.getElementById(id);
+    element.value = valueToSelect;
+}
 
-function customerTimeToMineEST() {}
+function customerTimeToMineUTC() {
+    validateEmptyValue();
+    var timeClient;
+    var newClientTime;
+    timeClient = document.getElementById("timeOfClient").value;
+    newClientTime = timeClient - 6;
+    document.getElementById("timeOfClientMDT").value = newClientTime + " " + "MDT";
+    console.log(timeClient);
+    selectElement('selectElementTime', '---');
+}
 
-function customerTimeToMinePST() {}
+function customerTimeToMineEST() {
+    var timeClient;
+    var newClientTime;
 
-function customerTimeToMineCST() {}
+    timeClient = document.getElementById("timeOfClient").value;
+    newClientTime = timeClient - 2;
+    document.getElementById("timeOfClientMDT").value = newClientTime + " " + "MDT";
+    console.log(timeClient);
+}
+
+function customerTimeToMinePST() {
+    var timeClient;
+    var newClientTime;
+
+    timeClient = document.getElementById("timeOfClient").value;
+    newClientTime = timeClient - 6;
+    document.getElementById("timeOfClientMDT").value = newClientTime + " " + "MDT";
+    console.log(timeClient);
+}
+
+function customerTimeToMineCST() {
+    var timeClient;
+    var newClientTime;
+
+    timeClient = document.getElementById("timeOfClient").value;
+    newClientTime = timeClient - 6;
+    document.getElementById("timeOfClientMDT").value = newClientTime + " " + "MDT";
+    console.log(timeClient);
+}
 //------------------------------//Fin de logica de tiempo.//------------------------------//
 
 

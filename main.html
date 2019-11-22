@@ -11,7 +11,7 @@
     <title>Alriosa Toolkit</title>
 </head>
 
-<body onload="autoTimeRefresh(60000)">
+<body>
     <!--First Section-->
     <section class="scrollify" id="section1">
 
@@ -85,21 +85,23 @@
             <div class="row">
                 <div class="col-md-3">
                     <p>Select the time zone of the Client</p>
-                    <select>
+                    <select id="selectElementTime">
                         <option value="selectNULL">---</option>
                         <option value="selectUTC" onclick="customerTimeToMineUTC()">UTC</option>
                         <option value="selectEST" onclick="customerTimeToMineEST()">EST</option>
                         <option value="selectPST" onclick="customerTimeToMinePST()">PST</option>
                         <option value="selectCST" onclick="customerTimeToMineCST()">CST</option>
                     </select>
+
+                    <button id="cleaningButton" onclick="cleaning()">Clean</button>
                 </div>
                 <div class="col-md-3">
                     <p>Time of the Client</p>
-                    <input type="text">
+                    <input type="text" class="" id="timeOfClient">
                 </div>
                 <div class="col-md-3">
-                    <p>Your Time of the Client</p>
-                    <input type="text" disabled>
+                    <p>Your Time</p>
+                    <input type="text" id="timeOfClientMDT" disabled>
                 </div>
                 <div class="col-md-3">
 
