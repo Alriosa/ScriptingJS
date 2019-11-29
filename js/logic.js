@@ -132,4 +132,7 @@ function windowPopUp() {
 }
 
 
+//-----Comienzo de Javascript queries (JQuery) Sandbox---------
 
+
+//***********Fin de Javascript Queries Sandbox*/
