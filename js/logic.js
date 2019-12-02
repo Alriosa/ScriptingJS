@@ -132,7 +132,21 @@ function windowPopUp() {
 }
 
 
+
 //-----Comienzo de Javascript queries (JQuery) Sandbox---------
+
+$("#hideButton").click(function() {
+    $(".thirdSelectionText").hide(1000);
+});
+
+$("#showButton").click(function() {
+    $(".thirdSelectionText").show(1000);
+});
+
+$("#toggleVisionButton").click(function() {
+    $(".thirdSelectionText").toggle(1000);
+});
+
 
 
 //***********Fin de Javascript Queries Sandbox*/
