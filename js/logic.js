@@ -147,6 +147,22 @@ $("#toggleVisionButton").click(function() {
     $(".thirdSelectionText").toggle(1000);
 });
 
+$("#toggleFadeButton").click(function() {
+    $(".thirdSelectionText2").fadeToggle(1000);
+});
+
+$("#addClassAlertButton").click(function() {
+    $(".thirdSelectionText2").addClass("alert");
+});
+
+$("#removeClassAlertButton").click(function() {
+    $(".thirdSelectionText2").removeClass("alert");
+});
+
+$("#toggleClassAlertButton").click(function() {
+    $(".thirdSelectionText2").toggleClass("alert");
+});
+
 
 
 //***********Fin de Javascript Queries Sandbox*/
